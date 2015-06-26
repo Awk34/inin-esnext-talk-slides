@@ -103,6 +103,23 @@ PI = 42;
         <!-- Classes -->
         <section>
             <h2>Classes</h2>
+
+            <pre><code class="javascript" data-trim contenteditable style="font-size: 20px;">
+class Foo extends Bar {
+    constructor(...args) {
+        super(...args);
+    }
+    get baz() {
+        return this.baz;
+    }
+    set baz(newBaz) {
+        this.baz = newBaz;
+    }
+    static staticThing() {
+        return new Object();
+    }
+}
+            </code></pre>
         </section>
 
         <!-- Arrow Functions -->
