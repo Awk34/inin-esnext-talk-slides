@@ -330,7 +330,20 @@ Object.assign(Point, { origin: new Point(0,0) })
                         and
                         <a href="">core.js</a>
                     </li>
+                    <li>React & JSX</li>
                 </ul>
+                <pre style="font-size: 18px;"><code data-trim contenteditable>
+var profile = <div>
+    <img src="avatar.png" class="profile" />
+    <h3>{[user.firstName, user.lastName].join(' ')}</h3>
+</div>;
+                </code></pre>
+                <pre style="font-size: 18px;"><code data-trim contenteditable>
+var profile = React.createElement("div", null,
+    React.createElement("img", { src: "avatar.png", "class": "profile" }),
+    React.createElement("h3", null, [user.firstName, user.lastName].join(" "))
+);
+                </code></pre>
             </section>
 
             <section>
