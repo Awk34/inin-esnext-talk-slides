@@ -265,27 +265,41 @@ console.log(set.size); // 0
 
         <!-- Standard Libraries -->
         <section>
-            <section>
-                <h2>Math</h2>
-            </section>
+            <h2>Number, Math, String, Object</h2>
+            <pre style="position: absolute; font-size: 14px;"><code data-trim contenteditable>
+Number.EPSILON
+Number.isInteger(Infinity) // false
+Number.isNaN("NaN") // false
 
-            <section>
-                <h2>Number</h2>
-            </section>
+Math.acosh(3) // 1.762747174039086
+Math.hypot(3, 4) // 5
+Math.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2) // 2
 
-            <section>
-                <h2>String</h2>
-            </section>
+"abcde".includes("cd") // true
+"abc".repeat(3) // "abcabcabc"
 
-            <section>
-                <h2>Object</h2>
-            </section>
+Array.from(document.querySelectorAll('*')) // Returns a real Array
+Array.of(1, 2, 3) // Similar to new Array(...), but without special one-arg behavior
+[0, 0, 0].fill(7, 1) // [0,7,7]
+[1, 2, 3].find(x => x == 3) // 3
+[1, 2, 3].findIndex(x => x == 2) // 1
+[1, 2, 3, 4, 5].copyWithin(3, 0) // [1, 2, 3, 1, 2]
+["a", "b", "c"].entries() // iterator [0, "a"], [1,"b"], [2,"c"]
+["a", "b", "c"].keys() // iterator 0, 1, 2
+["a", "b", "c"].values() // iterator "a", "b", "c"
+
+Object.assign(Point, { origin: new Point(0,0) })
+            </code></pre>
         </section>
 
         <!-- Lang -->
         <section>
-            <h2>Literals</h2>
+            <h2>Binary and Octal Literals</h2>
 
+            <pre><code data-trim contenteditable>
+0b111110111 === 503 // true
+0o767 === 503 // true
+            </code></pre>
         </section>
 
         <!-- Transpilers -->
