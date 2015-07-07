@@ -170,7 +170,7 @@ class Animal {
     }
     say(msg) {
         setTimeout(function() {
-            console.log(this.type + ' says ' + msg)
+            console.log(this.type + ' says ' + msg);
         }, 500);
     }
 }
@@ -184,9 +184,9 @@ class Animal {
         console.log('You made a ' + type);
         this.type = type;
     }
-    says(msg) {
+    say(msg) {
         setTimeout(function() {
-            console.log(this.type + ' says ' + msg)
+            console.log(this.type + ' says ' + msg);
         }.bind(this), 500);
     }
 }
@@ -203,7 +203,7 @@ class Animal {
     says(msg) {
         var self = this;
         setTimeout(function() {
-            console.log(self.type + ' says ' + msg)
+            console.log(self.type + ' says ' + msg);
         }, 500);
     }
 }
@@ -219,7 +219,7 @@ class Animal {
     }
     says(msg) {
         setTimeout(() => {
-            console.log(this.type + ' says ' + msg)
+            console.log(this.type + ' says ' + msg);
         }, 500);
     }
 }
