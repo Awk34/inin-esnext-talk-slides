@@ -139,6 +139,37 @@ class Foo extends Bar {
         <!-- Backticks -->
         <section>
             <h2>Backticks</h2>
+
+            <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 24px; max-height: 600px;">
+var things = [
+    'thing1',
+    'thing2',
+    'thing3'
+].join('\n');
+console.log(things);
+// thing1
+// thing2
+// thing3
+
+var pet = 'dog';
+console.log('I have a ' + pet);
+//I have a dog
+            </code></pre>
+            <pre class="fragment" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 24px; max-height: 600px;">
+var things = `
+thing1
+thing2
+thing3
+`;
+console.log(things);
+// thing1
+// thing2
+// thing3
+
+let pet = 'cat';
+console.log(`I have a ${pet}`);
+//I have a cat
+            </code></pre>
         </section>
 
         <!-- Objects -->
