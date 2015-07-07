@@ -20,6 +20,10 @@
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/solarized_dark.css">
 
+    <link rel="icon"
+          type="image/png"
+          href="images/inin.png">
+
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -36,7 +40,7 @@
 
 <body>
 <div class="reveal">
-    <!--<img src="images/inin.png" alt="Interactive Intelligence" style="position: fixed; bottom: 0; left: 5px; width: 100px;"/>-->
+    <img src="images/inin.png" alt="Interactive Intelligence" style="position: fixed; bottom: 0; left: 5px; width: 100px;"/>
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
@@ -46,9 +50,11 @@
             <h3>An overview of the features to come, and how to use them today</h3>
 
             <p>
-                <small><a href="http://andrewkoroluk.com">Andrew Koroluk</a> |
+                <small>
+                    <a href="http://andrewkoroluk.com">Andrew Koroluk</a> |
                     <a href="mailto:andrew.koroluk@inin.com">andrew.koroluk@inin.com</a> |
-                    <a href="https://github.com/Awk34">GitHub@Awk34</a></small>
+                    <a href="https://github.com/Awk34">GitHub@Awk34</a>
+                </small>
             </p>
         </section>
 
@@ -58,8 +64,11 @@
             <h4>Purecloud Telephony Admin Developer</h4>
 
             <ul>
-                <li>Generator Angular Fullstack</li>
-                <li></li>
+                <li><a href="https://github.com/DaftMonk/generator-angular-fullstack">Generator Angular Fullstack</a></li>
+                <li>Hackathon Hacker</li>
+                <li><a href="http://andrewkoroluk.com/photography">Amateur Photographer</a></li>
+                <li>Rock Climber</li>
+                <li>Tech Evangelist</li>
             </ul>
         </section>
 
@@ -144,51 +153,193 @@ class Foo extends Bar {
 
         <!-- Promise -->
         <section>
-            <h2>Promise API</h2>
+            <h2>Promises</h2>
+
+            <iframe
+                src="https://babeljs.io/repl/#?experimental=true&evaluate=true&loose=false&spec=false&code=function%20timeout(duration%20%3D%200)%20%7B%0A%20%20return%20new%20Promise((resolve%2C%20reject)%20%3D%3E%20%7B%0A%20%20%20%20setTimeout(resolve%2C%20duration)%3B%0A%20%20%7D)%3B%0A%7D%0A%0Avar%20p%20%3D%20timeout(1000).then(()%20%3D%3E%20%7B%0A%20%20%20%20return%20timeout(2000)%3B%0A%7D).then(()%20%3D%3E%20%7B%0A%20%20%20%20throw%20new%20Error(%22oops%22)%3B%0A%7D).catch(err%20%3D%3E%20%7B%0A%20%20%20%20return%20Promise.all(%5Btimeout(100)%2C%20timeout(200)%5D)%3B%0A%7D)%0A"
+                frameborder="0"></iframe>
         </section>
 
         <!-- Modules -->
         <section>
             <h2>Modules</h2>
+
+            <pre><code data-trim contenteditable>
+// lib/math.js
+export function sum(x, y) {
+    return x + y;
+}
+export var pi = 3.141592653589793;
+            </code></pre>
+            <pre class="fragment"><code data-trim contenteditable>
+// app.js
+import * as math from "lib/math";
+console.log("2π = " + math.sum(math.pi, math.pi));
+            </code></pre>
+            <pre class="fragment"><code data-trim contenteditable>
+// 6.283185307179586
+            </code></pre>
         </section>
 
         <!-- Map & Set -->
         <section>
-            <h2>Maps & Sets</h2>
-        </section>
+            <section>
+                <h2>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Maps</a>
+                    &
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Sets</a>
+                </h2>
 
-        <!-- Symbol -->
-        <section>
-            <h2>Symbol API</h2>
+                <h4>Efficient data structures for common algorithms</h4>
+
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+// Sets
+var s = new Set();
+s.add("hello").add("goodbye").add("hello");
+s.size === 2;
+s.has("hello") === true;
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+// Sets
+var s = new Set();
+s.add("hello").add("goodbye").add("hello");
+s.size === 2;
+s.has("hello") === true;
+
+// Maps
+var m = new Map();
+m.set("hello", 42);
+m.set(s, 34);
+m.get(s) == 34;
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+// Sets
+var s = new Set();
+s.add("hello").add("goodbye").add("hello");
+s.size === 2;
+s.has("hello") === true;
+
+// Maps
+var m = new Map();
+m.set("hello", 42);
+m.set(s, 34);
+m.get(s) == 34;
+
+for(item of map) console.log(item);
+// ["hello", 42]
+// [Set, 34]
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Maps</h2>
+
+                <h4>The Map object is a simple key/value map. Any value (both objects and primitive values) may be used as either a key or a value.</h4>
+
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+let map = new Map();
+
+const KEY1 = {};
+map.set(KEY1, 'hello');
+console.log(map.get(KEY1)); // hello
+
+const KEY2 = {};
+map.set(KEY2, 'world');
+console.log(map.get(KEY2)); // world
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+let map = new Map();
+
+const KEY1 = {};
+map.set(KEY1, 'hello');
+console.log(map.get(KEY1)); // hello
+
+const KEY2 = {};
+map.set(KEY2, 'world');
+console.log(map.get(KEY2)); // world
+
+console.log(map.get(KEY1)); // hello
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+let map = new Map();
+
+const KEY1 = {};
+map.set(KEY1, 'hello');
+console.log(map.get(KEY1)); // hello
+
+const KEY2 = {};
+map.set(KEY2, 'world');
+console.log(map.get(KEY2)); // world
+
+console.log(map.get(KEY1)); // hello
+
+console.log(map.get({})); // undefined
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Sets</h2>
+
+                <h4>The Set object lets you store unique values of any type, whether primitive values or object references.</h4>
+
+                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+let set = new Set();
+
+set.add('red');
+set.add('green');
+console.log(set.size); // 2
+
+set.clear();
+console.log(set.size); // 0
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>WeakMaps & WeakSets</h2>
+
+                <h4>Same as Maps and Sets, except they don't prevent their keys/elements from being garbage-collected (never worry about memory leaks!).</h4>
+
+                <h4>Don't allow iteration/looping (volatility) or clearing (security).</h4>
+            </section>
         </section>
 
         <!-- Standard Libraries -->
         <section>
-            <section>
-                <h2>Math</h2>
-            </section>
+            <h2>Number, Math, String, Object</h2>
+            <pre style="position: absolute; font-size: 14px;"><code data-trim contenteditable>
+Number.EPSILON
+Number.isInteger(Infinity) // false
+Number.isNaN("NaN") // false
 
-            <section>
-                <h2>Number</h2>
-            </section>
+Math.acosh(3) // 1.762747174039086
+Math.hypot(3, 4) // 5
+Math.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2) // 2
 
-            <section>
-                <h2>String</h2>
-            </section>
+"abcde".includes("cd") // true
+"abc".repeat(3) // "abcabcabc"
 
-            <section>
-                <h2>Object</h2>
-            </section>
+Array.from(document.querySelectorAll('*')) // Returns a real Array
+Array.of(1, 2, 3) // Similar to new Array(...), but without special one-arg behavior
+[0, 0, 0].fill(7, 1) // [0,7,7]
+[1, 2, 3].find(x => x == 3) // 3
+[1, 2, 3].findIndex(x => x == 2) // 1
+[1, 2, 3, 4, 5].copyWithin(3, 0) // [1, 2, 3, 1, 2]
+["a", "b", "c"].entries() // iterator [0, "a"], [1,"b"], [2,"c"]
+["a", "b", "c"].keys() // iterator 0, 1, 2
+["a", "b", "c"].values() // iterator "a", "b", "c"
+
+Object.assign(Point, { origin: new Point(0,0) })
+            </code></pre>
         </section>
 
         <!-- Lang -->
         <section>
-            <h2>Literals</h2>
-        </section>
+            <h2>Binary and Octal Literals</h2>
 
-        <!-- Summary -->
-        <section>
-            <h2>Summary</h2>
+            <pre><code data-trim contenteditable>
+0b111110111 === 503 // true
+0o767 === 503 // true
+            </code></pre>
         </section>
 
         <!-- Transpilers -->
@@ -199,7 +350,7 @@ class Foo extends Bar {
                 <p><b>Transpiler:</b> a type of compiler that takes the source code of one programming language and
                     outputs it into into source code of another programming language</p>
 
-                <ul style="display: flex; flex-flow: row wrap; justify-content: space-around;">
+                <ul style="display: flex; flex-flow: row wrap; justify-content: space-around; list-style: none;">
                     <li><img src="images/babel.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></li>
                     <li><img src="images/typescript.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></li>
                     <li><img src="images/coffeescript.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></li>
@@ -211,23 +362,36 @@ class Foo extends Bar {
                 <h2><img src="images/babel.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></h2>
 
                 <ul>
-                    <li>things</li>
+                    <li>ES6 Compatability: 71%</li>
+                    <li>ES7 Compatability: 71%</li>
+                    <li>
+                        Polyfills:
+                        <a href="">Regenerator</a>
+                        and
+                        <a href="">core.js</a>
+                    </li>
+                    <li>React & JSX</li>
                 </ul>
+                <pre style="font-size: 18px;"><code data-trim contenteditable>
+var profile = <div>
+    <img src="avatar.png" class="profile" />
+    <h3>{[user.firstName, user.lastName].join(' ')}</h3>
+</div>;
+                </code></pre>
+                <pre style="font-size: 18px;"><code data-trim contenteditable>
+var profile = React.createElement("div", null,
+    React.createElement("img", { src: "avatar.png", "class": "profile" }),
+    React.createElement("h3", null, [user.firstName, user.lastName].join(" "))
+);
+                </code></pre>
             </section>
 
             <section>
                 <h2><img src="images/typescript.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></h2>
 
                 <ul>
-                    <li>things</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2><img src="images/coffeescript.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></h2>
-
-                <ul>
-                    <li>things</li>
+                    <li>ES6 Compatability: 25%</li>
+                    <li>ES7 Compatability: 0%</li>
                 </ul>
             </section>
 
@@ -235,7 +399,17 @@ class Foo extends Bar {
                 <h2><img src="images/traceur.svg" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></h2>
 
                 <ul>
-                    <li>things</li>
+                    <li>ES6 Compatability: 58%</li>
+                    <li>ES7 Compatability: 14%</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><img src="images/coffeescript.png" alt="" style="max-height: 150px; flex-shrink: 0; margin: 5px;"/></h2>
+
+                <ul>
+                    <li>ES6 Compatability: 0%</li>
+                    <li>ES7 Compatability: 0%</li>
                 </ul>
             </section>
         </section>
@@ -445,36 +619,6 @@ Reveal.addEventListener( 'customevent', function() {
 
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
-<script>
-
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true, progress: true, history: true, center: true,
-
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-        // Optional reveal.js plugins
-        dependencies: [{
-            src: 'lib/js/classList.js', condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js', condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js', condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/highlight/highlight.js', async: true, condition: function() {
-                return !!document.querySelector('pre code');
-            }, callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {src: 'plugin/zoom-js/zoom.js', async: true}, {src: 'plugin/notes/notes.js', async: true}]
-    });
-</script>
+<script src="index.js"></script>
 </body>
 </html>

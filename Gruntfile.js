@@ -1,6 +1,6 @@
 /* global module:false */
 module.exports = function(grunt) {
-	var port = grunt.option('port') || 8000;
+	var port = grunt.option('port') || 7000;
 	var base = grunt.option('base') || '.';
 
 	// Project configuration
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 		sass: {
 			core: {
 				files: {
-					'css/reveal.css': 'css/reveal.scss',
+					'css/reveal.css': 'css/reveal.scss'
 				}
 			},
 			themes: {
@@ -168,5 +168,4 @@ module.exports = function(grunt) {
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
-
 };
