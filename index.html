@@ -458,6 +458,29 @@ async function foo() {
                     Makes async programming look like sync programmming
                 </aside>
             </section>
+
+            <section>
+                <h2>Async/Await (ES7)</h2>
+
+                <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
+async function foo(x) {
+    setTimeout(() => {
+        return x;
+    }, Math.round(Math.random() * 100));
+}
+                </code></pre>
+                <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
+async function bar() {
+    let x = await foo(3);
+    return await foo(x + 4);
+}
+// 7
+                </code></pre>
+
+                <aside class="notes">
+
+                </aside>
+            </section>
         </section>
 
         <!-- Promise -->
