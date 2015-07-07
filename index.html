@@ -423,6 +423,41 @@ console.log(counter.next());
                     Function that returns multiple times
                 </aside>
             </section>
+
+            <section>
+                <h2>Async Functions (ES7)</h2>
+
+                <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
+function foo() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(Math.round(Math.random()))
+                return resolve('Success!');
+            else
+                return reject('Failure!');
+        }, 500);
+    });
+}
+                </code></pre>
+                <div class="fragment">
+                    =
+                    <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
+async function foo() {
+    setTimeout(() => {
+        if(Math.round(Math.random()))
+            return 'Success!';
+        else
+            throw 'Failure!';
+    }, 500);
+}
+                    </code></pre>
+                </div>
+
+                <aside class="notes">
+                    Function that returns a Promise object
+                    Makes async programming look like sync programmming
+                </aside>
+            </section>
         </section>
 
         <!-- Promise -->
