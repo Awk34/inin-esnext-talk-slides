@@ -41,6 +41,13 @@ app.get('/', function( req, res ) {
 
 });
 
+app.get('/index.js', function( req, res ) {
+
+	res.writeHead( 200, { 'Content-Type': 'text/javascript' } );
+	fs.createReadStream( opts.baseDir + '/index.js' ).pipe( res );
+
+});
+
 app.get( '/notes/:socketId', function( req, res ) {
 
 	fs.readFile( opts.baseDir + 'plugin/notes-server/notes.html', function( err, data ) {

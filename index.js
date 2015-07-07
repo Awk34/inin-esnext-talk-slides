@@ -11,6 +11,12 @@ Reveal.initialize({
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
 
+    multiplex: {
+        secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
+        id: '8b6cf67d22209131', // Obtained from socket.io server
+        url: 'andrewkoroluk.com:1948' // Location of socket.io server
+    },
+
     // Optional reveal.js plugins
     dependencies: [{
         src: 'lib/js/classList.js',
@@ -44,6 +50,12 @@ Reveal.initialize({
         async: true
     }, {
         src: 'socket.io/socket.io.js',
+        async: true
+    }, {
+        src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js',
+        async: true
+    }, {
+        src: 'plugin/multiplex/client.js',
         async: true
     }, {
         src: 'plugin/notes-server/client.js',
