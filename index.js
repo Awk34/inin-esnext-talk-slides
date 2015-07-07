@@ -13,7 +13,7 @@ Reveal.initialize({
 
     multiplex: {
         secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
-        id: '8b6cf67d22209131', // Obtained from socket.io server
+        id: '664093dc5d038c07', // Obtained from socket.io server
         url: 'andrewkoroluk.com:1948' // Location of socket.io server
     },
 
