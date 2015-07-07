@@ -159,12 +159,11 @@ let integers = [1, 1.5, 2, 2.5, 3].filter(num => Number.isInteger(num));
                 <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 class Animal {
     constructor(type) {
-        console.log('You made a ' + type);
         this.type = type;
     }
     say(msg) {
         setTimeout(function() {
-            console.log(this.type + ' says ' + msg)
+            console.log(this.type + ' says ' + msg);
         }, 500);
     }
 }
@@ -174,7 +173,6 @@ dog.say('woof');
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 class Animal {
     constructor(type) {
-        console.log('You made a ' + type);
         this.type = type;
     }
     say(msg) {
@@ -190,7 +188,6 @@ dog.say('woof');
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
 class Animal {
     constructor(type) {
-        console.log('You made a ' + type);
         this.type = type;
     }
     say(msg) {
@@ -206,10 +203,9 @@ dog.say('woof');
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
 class Animal {
     constructor(type) {
-        console.log('You made a ' + type);
         this.type = type;
     }
-    says(msg) {
+    say(msg) {
         var self = this;
         setTimeout(function() {
             console.log(self.type + ' says ' + msg);
@@ -223,10 +219,9 @@ dog.say('woof');
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
 class Animal {
     constructor(type) {
-        console.log('You made a ' + type);
         this.type = type;
     }
-    says(msg) {
+    say(msg) {
         setTimeout(() => {
             console.log(this.type + ' says ' + msg);
         }, 500);
