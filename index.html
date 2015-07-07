@@ -132,8 +132,109 @@ class Foo extends Bar {
         </section>
 
         <!-- Arrow Functions -->
-        <section>
-            <h2>Arrow Functions</h2>
+        <section style="height: 100%">
+            <section>
+                <h2>Arrow Functions</h2>
+
+                <iframe
+                    src="https://babeljs.io/repl/#?experimental=true&evaluate=true&loose=false&spec=false&code=var%20integers%20%3D%20%5B1%2C%201.5%2C%202%2C%202.5%2C%203%5D%0D%0A%20%20.filter(function(num)%20%7B%0D%0A%20%20%20%20return%20Number.isInteger(num)%3B%0D%0A%20%20%7D)%3B%0D%0A%0D%0Aconsole.log(integers)%3B"
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    style="width: 100%; height: 600px;"
+                    allowfullscreen></iframe>
+
+                <!--<pre><code class="javascript" data-trim contenteditable style="font-size: 20px;">-->
+<!--var integers = [1, 1.5, 2, 2.5, 3].filter(function(num) {-->
+    <!--Number.isInteger(num);-->
+<!--});-->
+                <!--</code></pre>-->
+                <!--<pre><code class="javascript" data-trim contenteditable style="font-size: 20px;">-->
+<!--let integers = [1, 1.5, 2, 2.5, 3].filter(num => Number.isInteger(num));-->
+                <!--</code></pre>-->
+            </section>
+
+            <section>
+                <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+class Animal {
+    constructor(type) {
+        console.log('You made a ' + type);
+        this.type = type;
+    }
+    say(msg) {
+        setTimeout(function() {
+            console.log(this.type + ' says ' + msg)
+        }, 500);
+    }
+}
+let dog = new Animal('dog');
+dog.say('woof');
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+class Animal {
+    constructor(type) {
+        console.log('You made a ' + type);
+        this.type = type;
+    }
+    say(msg) {
+        setTimeout(function() {
+            console.log(this.type + ' says ' + msg)
+        }, 500);
+    }
+}
+let dog = new Animal('dog');
+dog.say('woof');
+// undefined says woof
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
+class Animal {
+    constructor(type) {
+        console.log('You made a ' + type);
+        this.type = type;
+    }
+    says(msg) {
+        setTimeout(function() {
+            console.log(this.type + ' says ' + msg)
+        }.bind(this), 500);
+    }
+}
+let dog = new Animal('dog');
+dog.say('woof');
+// dog says woof
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
+class Animal {
+    constructor(type) {
+        console.log('You made a ' + type);
+        this.type = type;
+    }
+    says(msg) {
+        var self = this;
+        setTimeout(function() {
+            console.log(self.type + ' says ' + msg)
+        }, 500);
+    }
+}
+let dog = new Animal('dog');
+dog.say('woof');
+// dog says woof
+                </code></pre>
+                <pre class="fragment" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px; max-height: 600px;">
+class Animal {
+    constructor(type) {
+        console.log('You made a ' + type);
+        this.type = type;
+    }
+    says(msg) {
+        setTimeout(() => {
+            console.log(this.type + ' says ' + msg)
+        }, 500);
+    }
+}
+
+let dog = new Animal('dog');
+dog.say('woof');
+// dog says woof
+                </code></pre>
+            </section>
         </section>
 
         <!-- Backticks -->
