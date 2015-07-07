@@ -299,6 +299,37 @@ var obj = {
             </code></pre>
         </section>
 
+        <!-- Destructuring -->
+        <section>
+            <h2>Destructuring</h2>
+
+            <pre class="stretch"><code class="js" data-trim contenteditable style="font-size: 18px;">
+// list matching
+let [a, , b] = [1,2,3];
+
+// object matching
+let obj = {a: 1, b: 2}
+let {a, b} = obj
+a === 1
+b === 2
+
+// Can be used in parameter position
+function func({name: x}) {
+    console.log(x);
+}
+func({name: 5})
+// 5
+
+// Fail-soft destructuring
+var [a] = [];
+a === undefined;
+
+// Fail-soft destructuring with defaults
+var [a = 1] = [];
+a === 1;
+            </code></pre>
+        </section>
+
         <!-- Functions -->
         <section>
             <h2>Functions</h2>
