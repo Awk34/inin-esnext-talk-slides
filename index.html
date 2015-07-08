@@ -311,9 +311,9 @@ console.log(`I have a ${pet}`);
         <section>
             <h2>Objects</h2>
 
-            <pre><code class="js" data-trim contenteditable style="font-size: 22px;">
+            <pre><code class="js" data-trim contenteditable style="font-size: 20px;">
 var obj = {
-    // __proto__
+    // Prototype assignment
     __proto__: theProtoObj,
 
     // Shorthand for ‘handler: handler’
@@ -322,7 +322,7 @@ var obj = {
     // Methods
     toString() {
         // Super calls
-        return "d " + super.toString();
+        return "Thing: " + super.toString();
     },
 
     // Computed (dynamic) property names
