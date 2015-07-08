@@ -593,9 +593,13 @@ export var pi = 3.141592653589793;
 // app.js
 import * as math from "lib/math";
 console.log("2π = " + math.sum(math.pi, math.pi));
+// 2π = 6.283185307179586
             </code></pre>
             <pre class="fragment"><code data-trim contenteditable>
-// 6.283185307179586
+// app.js
+import {pi as pie, sum} from "lib/math";
+console.log("2π = " + sum(pie, pie));
+// 2π = 6.283185307179586
             </code></pre>
         </section>
 
