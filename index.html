@@ -66,7 +66,7 @@
             <ul>
                 <li>Hackathon Hacker</li>
                 <li><a href="http://andrewkoroluk.com/">Tech Evangelist</a></li>
-                <li><a href="https://github.com/DaftMonk/generator-angular-fullstack">Generator Angular Fullstack</a></li>
+                <li><a href="https://github.com/DaftMonk/generator-angular-fullstack">Angular Full-Stack Generator</a></li>
                 <li><a href="http://andrewkoroluk.com/photography">Amateur Photographer</a></li>
                 <li>Rock Climber</li>
             </ul>
@@ -259,7 +259,6 @@ class Animal {
         }, 500);
     }
 }
-
 let dog = new Animal('dog');
 dog.say('woof');
 // dog says woof
@@ -635,13 +634,45 @@ var p = timeout(1000).then(() => {
                 <li>Symbol.toPrimitive</li>
             </ul>
 
-            <pre><code data-trim contenteditable>
+            <pre><code class="js" data-trim contenteditable>
 Symbol('foo') !== Symbol('foo')
             </code></pre>
 
             <aside class="notes">
                 like named enumerations in C
             </aside>
+        </section>
+
+        <!-- Proxies -->
+        <section>
+            <h2>Proxies<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><img src="images/mdn.png"/></a></h2>
+
+            <p style="font-size: .75em;">used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).</p>
+
+            <pre class="stretch"><code class="js" data-trim contenteditable style="font-size: 16px;">
+let validator = {
+    set: function(obj, prop, value) {
+        if(prop === 'age') {
+            if(!Number.isInteger(value)) {
+                throw new TypeError('The age is not an integer');
+            }
+            if(value > 200) {
+                throw new RangeError('The age seems invalid');
+            }
+        }
+
+        // The default behavior to store the value
+        obj[prop] = value;
+    }
+};
+
+let person = new Proxy({}, validator);
+
+person.age = 21;
+console.log(person.age); // 21
+person.age = 'young'; // Throws an exception
+person.age = 300; // Throws an exception
+            </code></pre>
         </section>
 
         <!-- Modules -->
@@ -879,17 +910,18 @@ let indyEmployees = [
 ]
 
 // Object.observe
-var obj = {
+let obj = {
     foo: 0,
     bar: 1,
 }
-Object.observe(obj, changes => console.log(changes));
+Object.observe(obj, ::console.log(changes));
 obj.baz = 2; // [type: 'add', object:{foo: 0, bar: 1, baz: 2}, name: 'baz'}]
 obj.foo = 'hello'; // [{type: 'update', object: {foo: 'hello', bar: 1, baz: 2}, name: foo, oldValue: 0}]
             </code></pre>
 
             <aside class="notes">
                 Trailing Comma: prevents unnecessary version control history; already in Python, D, Hack<br/><br/>
+                Async Generators, Observable, Jafar Husain @ Netflix
             </aside>
         </section>
 
