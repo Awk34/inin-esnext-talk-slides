@@ -862,6 +862,15 @@ let indyEmployees = [
         if(e.city == "Indianapolis")
             { name: e.name, age: e.age }
 ]
+
+// Object.observe
+var obj = {
+    foo: 0,
+    bar: 1,
+}
+Object.observe(obj, changes => console.log(changes));
+obj.baz = 2; // [type: 'add', object:{foo: 0, bar: 1, baz: 2}, name: 'baz'}]
+obj.foo = 'hello'; // [{type: 'update', object: {foo: 'hello', bar: 1, baz: 2}, name: foo, oldValue: 0}]
             </code></pre>
 
             <aside class="notes">
