@@ -552,6 +552,32 @@ var p = timeout(1000).then(() => {
             </aside>
         </section>
 
+        <!-- Symbols -->
+        <section>
+            <h2>
+                Symbols
+                <a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><img src="images/mdn.png"/></a>
+            </h2>
+
+            <p style="font-size: .75em;">A symbol is a unique and immutable data type and may be used as an identifier for object properties.</p>
+            <p style="font-size: .75em;">There is a Symbol primitive data type, and a globally available Symbol implicit object wrapper for it.</p>
+
+            <h4>Well-known Symbols:</h4>
+            <ul>
+                <li>Symbol.iterator</li>
+                <li>Symbol.hasInstance</li>
+                <li>Symbol.toPrimitive</li>
+            </ul>
+
+            <pre><code data-trim contenteditable>
+Symbol('foo') !== Symbol('foo')
+            </code></pre>
+
+            <aside class="notes">
+                like named enumerations in C
+            </aside>
+        </section>
+
         <!-- Modules -->
         <section>
             <h2>Modules</h2>
