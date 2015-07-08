@@ -387,6 +387,16 @@ function f(x, y, z) {
 // Pass each elem of array as argument
 f(...[1,2,3]) === 6
             </code></pre>
+            <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
+// Object Rest/Spread (ES7)
+let { x, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x; // 1
+y; // 2
+z; // { a: 3, b: 4 }
+
+let n = { x, y, ...z };
+n; // { x: 1, y: 2, a: 3, b: 4 }
+            </code></pre>
         </section>
 
         <!-- Functions -->
@@ -840,15 +850,6 @@ function func(
     param1,
     param2,
 ) { /* ... */ }
-
-// Object Rest/Spread
-let { x, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-x; // 1
-y; // 2
-z; // { a: 3, b: 4 }
-
-let n = { x, y, ...z };
-n; // { x: 1, y: 2, a: 3, b: 4 }
 
 // Function Bind Syntax
 document.querySelectorAll("div.myClass")::find("p")::html("hahaha");
