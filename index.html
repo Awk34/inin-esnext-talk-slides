@@ -87,7 +87,11 @@
 
         <!-- Let & Const -->
         <section>
-            <h2>Let & Const</h2>
+            <h2>
+                Let<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><img src="images/mdn.png"/></a>
+                &nbsp; &
+                Const<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><img src="images/mdn.png"/></a>
+            </h2>
 
             <pre><code class="javascript" data-trim contenteditable style="font-size: 20px;">
 if(true) {
@@ -123,7 +127,7 @@ console.log(x); // 1
 
         <!-- Classes -->
         <section>
-            <h2>Classes</h2>
+            <h2>Classes<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"><img src="images/mdn.png"/></a></h2>
 
             <pre class="stretch"><code class="javascript" data-trim contenteditable style="font-size: 20px;">
 class Foo extends Bar {
@@ -160,7 +164,7 @@ class Foo extends Bar {
         <!-- Arrow Functions -->
         <section style="height: 100%">
             <section>
-                <h2>Arrow Functions</h2>
+                <h2>Arrow Functions<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"><img src="images/mdn.png"/></a></h2>
 
                 <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 var integers = [1, 1.5, 2, 2.5, 3].filter(function(num) {
@@ -182,7 +186,7 @@ let integers = [1, 1.5, 2, 2.5, 3].filter(num => Number.isInteger(num));
             </section>
 
             <section>
-                <h2>Arrow Functions</h2>
+                <h2>Arrow Functions<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"><img src="images/mdn.png"/></a></h2>
 
                 <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 18px;">
 class Animal {
@@ -267,9 +271,9 @@ dog.say('woof');
             </section>
         </section>
 
-        <!-- Backticks -->
+        <!-- Backticks / Template Strings -->
         <section>
-            <h2>Backticks</h2>
+            <h2>Template Strings<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings"><img src="images/mdn.png"/></a></h2>
 
             <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 22px;">
 var things = [
@@ -309,7 +313,7 @@ console.log(`I have a ${pet}`);
 
         <!-- Objects -->
         <section>
-            <h2>Objects</h2>
+            <h2>Objects<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><img src="images/mdn.png"/></a></h2>
 
             <pre><code class="js" data-trim contenteditable style="font-size: 20px;">
 var obj = {
@@ -333,7 +337,7 @@ var obj = {
 
         <!-- Destructuring -->
         <section>
-            <h2>Destructuring</h2>
+            <h2>Destructuring<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"><img src="images/mdn.png"/></a></h2>
 
             <pre class="stretch"><code class="js" data-trim contenteditable style="font-size: 18px;">
 // list matching
@@ -364,7 +368,11 @@ a === 1;
 
         <!-- Default, Rest, Spread -->
         <section>
-            <h2>Default, Rest, Spread</h2>
+            <h2>
+                Default<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"><img src="images/mdn.png"/></a>,
+                Rest<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"><img src="images/mdn.png"/></a>,
+                Spread<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator"><img src="images/mdn.png"/></a>
+            </h2>
 
             <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
 function f(x, y=12, z=(() => 3)()) {
@@ -402,7 +410,7 @@ n; // { x: 1, y: 2, a: 3, b: 4 }
         <!-- Functions -->
         <section>
             <section>
-                <h2>Generator Functions</h2>
+                <h2>Generator Functions<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*"><img src="images/mdn.png"/></a></h2>
 
                 <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 function* countToThree() {
@@ -587,7 +595,7 @@ async function bar() {
 
         <!-- Promise -->
         <section>
-            <h2>Promises</h2>
+            <h2>Promises<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><img src="images/mdn.png"/></a></h2>
 
             <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
 function timeout(duration = 0) {
@@ -638,7 +646,7 @@ Symbol('foo') !== Symbol('foo')
 
         <!-- Modules -->
         <section>
-            <h2>Modules</h2>
+            <h2>Modules<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><img src="images/mdn.png"/></a></h2>
 
             <pre><code data-trim contenteditable>
 // lib/math.js
@@ -800,7 +808,13 @@ set.size; // 0
 
         <!-- Standard Libraries -->
         <section>
-            <h2>Number, Math, String, Object</h2>
+            <h2 style="font-size: 1.5em;">
+                Number<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_Number_object"><img src="images/mdn.png"/></a>&nbsp; ,
+                Math<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#New_Math_functions"><img src="images/mdn.png"/></a>&nbsp; ,
+                String<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object"><img src="images/mdn.png"/></a>&nbsp; ,
+                Object<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_Object_object"><img src="images/mdn.png"/></a>
+            </h2>
+
             <pre style="position: absolute; font-size: 14px;"><code data-trim contenteditable>
 Number.EPSILON
 Number.isInteger(Infinity) // false
@@ -829,7 +843,7 @@ Object.assign(Point, { origin: new Point(0,0) })
 
         <!-- Lang -->
         <section>
-            <h2>Binary and Octal Literals</h2>
+            <h2 style="font-size: 1.75em;">Binary and Octal Literals<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals"><img src="images/mdn.png"/></a></h2>
 
             <pre><code data-trim contenteditable>
 0b111110111 === 503 // true
