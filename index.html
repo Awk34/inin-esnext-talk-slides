@@ -469,6 +469,53 @@ console.log(counter.next());
             </section>
 
             <section>
+                <h2>
+                    yield*
+                    <a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*"><img src="images/mdn.png"/></a>
+                </h2>
+
+                <p>
+                    Yields every yield inside of the called generator function
+                </p>
+
+                <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+function* countToThree() {
+  var index = 1;
+  while(index <= 3)
+    yield index++;
+}
+
+function* zeroToFour() {
+    yield 0;
+    yield* countToThree();
+    yield 4;
+}
+                </code></pre>
+                <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+function* countToThree() {
+  var index = 1;
+  while(index <= 3)
+    yield index++;
+}
+
+function* zeroToFour() {
+    yield 0;
+    yield* countToThree();
+    yield 4;
+}
+
+for(let n of zeroToFour()) {
+    console.log(n);
+}
+// 0
+// 1
+// 2
+// 3
+// 4
+                </code></pre>
+            </section>
+
+            <section>
                 <h2>Async Functions (ES7)</h2>
 
                 <pre><code class="js" data-trim contenteditable style="font-size: 16px;">
