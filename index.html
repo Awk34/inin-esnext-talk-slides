@@ -748,17 +748,21 @@ map.get({}); // undefined
             <section>
                 <h2>Sets<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><img src="images/mdn.png"/></a></h2>
 
-                <h4>The Set object lets you store unique values of any type, whether primitive values or object references.</h4>
+                <p>The Set object lets you store unique values of any type, whether primitive values or object references.</p>
 
-                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+                <pre style="position: absolute;"><code data-trim contenteditable>
 let set = new Set();
 
 set.add('red');
 set.add('green');
-console.log(set.size); // 2
+set.add('green');
+set.size; // 2
+
+set.delete('green');
+set.has('green'); // false
 
 set.clear();
-console.log(set.size); // 0
+set.size; // 0
                 </code></pre>
             </section>
 
