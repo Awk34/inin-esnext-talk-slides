@@ -659,41 +659,46 @@ console.log("2π = " + sum(pie, pie));
 
                 <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
 // Sets
-var s = new Set();
-s.add("hello").add("goodbye").add("hello");
-s.size === 2;
-s.has("hello") === true;
+var set = new Set();
+set.add("hello").add("goodbye").add("hello");
+set.size === 2;
+set.has("hello") === true;
                 </code></pre>
                 <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
 // Sets
-var s = new Set();
-s.add("hello").add("goodbye").add("hello");
-s.size === 2;
-s.has("hello") === true;
+var set = new Set();
+set.add("hello").add("goodbye").add("hello");
+set.size === 2;
+set.has("hello") === true;
 
 // Maps
-var m = new Map();
-m.set("hello", 42);
-m.set(s, 34);
-m.get(s) == 34;
+var map = new Map();
+map.set("hello", 42);
+map.set(set, 34);
+map.get(set) == 34;
                 </code></pre>
                 <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
 // Sets
-var s = new Set();
-s.add("hello").add("goodbye").add("hello");
-s.size === 2;
-s.has("hello") === true;
+var set = new Set();
+set.add("hello").add("goodbye").add("hello");
+set.size === 2;
+set.has("hello") === true;
 
 // Maps
-var m = new Map();
-m.set("hello", 42);
-m.set(s, 34);
-m.get(s) == 34;
+var map = new Map();
+map.set("hello", 42);
+map.set(set, 34);
+map.get(set) == 34;
 
-for(item of map) console.log(item);
+for(let item of map) console.log(item);
 // ["hello", 42]
-// [Set, 34]
+// [["hello","goodbye"], 34]
                 </code></pre>
+
+                <aside class="notes">
+                    Set is a collection of distinct objects<br/><br/>
+                    ES5 Objects are not maps
+                </aside>
             </section>
 
             <section>
