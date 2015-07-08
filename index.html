@@ -123,7 +123,7 @@ console.log(x); // 1
         <section>
             <h2>Classes</h2>
 
-            <pre><code class="javascript" data-trim contenteditable style="font-size: 20px;">
+            <pre class="stretch"><code class="javascript" data-trim contenteditable style="font-size: 20px;">
 class Foo extends Bar {
     constructor() {
         super();
@@ -133,12 +133,26 @@ class Foo extends Bar {
     }
     set baz(newBaz) {
         this.baz = newBaz;
+        console.log('You changed baz!');
     }
-    static staticThing() {
-        return new Object();
+    static inc(x) {
+        return x + 1;
     }
+    // ES7
+    name = 'Foo';
+
+    @readonly
+    bar() {}
+    @enumerable(false)
+    baz() {}
 }
             </code></pre>
+
+            <aside class="notes">
+                `static` same as placing on prototype object<br/><br/>
+                classes are not hoisted<br/><br/>
+                Decorators make it possible to annotate and modify classes and properties at design time.
+            </aside>
         </section>
 
         <!-- Arrow Functions -->
