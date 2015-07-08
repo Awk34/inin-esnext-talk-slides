@@ -873,8 +873,11 @@ let indyEmployees = [
                 <ul>
                     <li>ES6 Compatability: 71%</li>
                     <li>ES7 Compatability: 71%</li>
-                    <li><a href="https://github.com/facebook/regenerator">Regenerator</a></li>
-                    <li><a href="https://github.com/zloirock/core-js">core-js</a></li>
+                    <li>
+                        <a href="https://github.com/facebook/regenerator">Regenerator</a>,
+                        <a href="https://github.com/zloirock/core-js">core-js</a>,
+                        <a href="https://babeljs.io/docs/advanced/transformers/">transformers</a>
+                    </li>
                     <li>React & JSX</li>
                 </ul>
                 <pre style="font-size: 18px;"><code data-trim contenteditable>
@@ -889,6 +892,12 @@ var profile = React.createElement("div", null,
     React.createElement("h3", null, [user.firstName, user.lastName].join(" "))
 );
                 </code></pre>
+
+                <aside class="notes">
+                    inlineEnvironmentVariables + deadCodeElimination<br/><br/>
+                    anti JScript bug transformer<br/><br/>
+                    Also great API..
+                </aside>
             </section>
 
             <section>
