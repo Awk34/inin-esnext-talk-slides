@@ -1,3 +1,3 @@
-# ININ ES.Next Tech Talk (July 8, 2015)
+# ININ ES.Next Tech Talk Slides (July 8, 2015)
 
 
