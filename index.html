@@ -703,7 +703,11 @@ console.log("2π = " + sum(pie, pie));
         <!-- Map & Set -->
         <section>
             <section>
-                <h2>Maps & Sets</h2>
+                <h2>
+                    Maps<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><img src="images/mdn.png"/></a>
+                    &nbsp; &
+                    Sets<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><img src="images/mdn.png"/></a>
+                </h2>
 
                 <h4>Efficient data structures for common algorithms</h4>
 
@@ -752,75 +756,75 @@ for(let item of map) console.log(item);
                 </aside>
             </section>
 
-            <section>
-                <h2>
-                    Maps
-                    <a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><img src="images/mdn.png"/></a>
-                </h2>
+            <!--<section>-->
+                <!--<h2>-->
+                    <!--Maps-->
+                    <!--<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><img src="images/mdn.png"/></a>-->
+                <!--</h2>-->
 
-                <p>The Map object is a simple key/value map. Any value (both objects and primitive values) may be used as either a key or a value.</p>
+                <!--<p>The Map object is a simple key/value map. Any value (both objects and primitive values) may be used as either a key or a value.</p>-->
 
-                <pre style="position: absolute;"><code data-trim contenteditable>
-let map = new Map();
+                <!--<pre style="position: absolute;"><code data-trim contenteditable>-->
+<!--let map = new Map();-->
 
-const KEY1 = {};
-map.set(KEY1, 'hello');
-map.get(KEY1); // hello
+<!--const KEY1 = {};-->
+<!--map.set(KEY1, 'hello');-->
+<!--map.get(KEY1); // hello-->
 
-const KEY2 = {};
-map.set(KEY2, 'world');
-map.get(KEY2); // world
-                </code></pre>
-                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
-let map = new Map();
+<!--const KEY2 = {};-->
+<!--map.set(KEY2, 'world');-->
+<!--map.get(KEY2); // world-->
+                <!--</code></pre>-->
+                <!--<pre class="fragment" style="position: absolute;"><code data-trim contenteditable>-->
+<!--let map = new Map();-->
 
-const KEY1 = {};
-map.set(KEY1, 'hello');
-map.get(KEY1); // hello
+<!--const KEY1 = {};-->
+<!--map.set(KEY1, 'hello');-->
+<!--map.get(KEY1); // hello-->
 
-const KEY2 = {};
-map.set(KEY2, 'world');
-map.get(KEY2); // world
+<!--const KEY2 = {};-->
+<!--map.set(KEY2, 'world');-->
+<!--map.get(KEY2); // world-->
 
-map.get(KEY1); // hello
-                </code></pre>
-                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
-let map = new Map();
+<!--map.get(KEY1); // hello-->
+                <!--</code></pre>-->
+                <!--<pre class="fragment" style="position: absolute;"><code data-trim contenteditable>-->
+<!--let map = new Map();-->
 
-const KEY1 = {};
-map.set(KEY1, 'hello');
-map.get(KEY1); // hello
+<!--const KEY1 = {};-->
+<!--map.set(KEY1, 'hello');-->
+<!--map.get(KEY1); // hello-->
 
-const KEY2 = {};
-map.set(KEY2, 'world');
-map.get(KEY2); // world
+<!--const KEY2 = {};-->
+<!--map.set(KEY2, 'world');-->
+<!--map.get(KEY2); // world-->
 
-map.get(KEY1); // hello
+<!--map.get(KEY1); // hello-->
 
-map.get({}); // undefined
-                </code></pre>
-            </section>
+<!--map.get({}); // undefined-->
+                <!--</code></pre>-->
+            <!--</section>-->
 
-            <section>
-                <h2>Sets<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><img src="images/mdn.png"/></a></h2>
+            <!--<section>-->
+                <!--<h2>Sets<a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><img src="images/mdn.png"/></a></h2>-->
 
-                <p>The Set object lets you store unique values of any type, whether primitive values or object references.</p>
+                <!--<p>The Set object lets you store unique values of any type, whether primitive values or object references.</p>-->
 
-                <pre style="position: absolute;"><code data-trim contenteditable>
-let set = new Set();
+                <!--<pre style="position: absolute;"><code data-trim contenteditable>-->
+<!--let set = new Set();-->
 
-set.add('red');
-set.add('green');
-set.add('green');
-set.size; // 2
+<!--set.add('red');-->
+<!--set.add('green');-->
+<!--set.add('green');-->
+<!--set.size; // 2-->
 
-set.delete('green');
-set.has('green'); // false
+<!--set.delete('green');-->
+<!--set.has('green'); // false-->
 
-set.clear();
-set.size; // 0
-                </code></pre>
-            </section>
+<!--set.clear();-->
+<!--set.size; // 0-->
+                <!--</code></pre>-->
+            <!--</section>-->
 
             <section>
                 <h2 style="font-size: 2em;">
