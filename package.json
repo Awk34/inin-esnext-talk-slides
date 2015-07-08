@@ -1,22 +1,21 @@
 {
-  "name": "reveal.js",
-  "version": "3.1.0",
-  "description": "The HTML Presentation Framework",
+  "name": "inin-esnext-talk-slides",
+  "version": "0.0.1",
+  "description": "ININ ES.Next Tech Talk Slides (July 8, 2015)",
   "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
-  "main": "js/reveal.js",
+  "main": "index.js",
   "scripts": {
     "test": "grunt test",
     "start": ""
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Andrew Koroluk",
+    "email": "andrew.koroluk@inin.com",
+    "web": "http://andrewkoroluk.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/Awk34/inin-esnext-talk-slides.git"
   },
   "engines": {
     "node": "~0.10.0"
