@@ -702,46 +702,46 @@ for(item of map) console.log(item);
                     <a class="mdn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><img src="images/mdn.png"/></a>
                 </h2>
 
-                <h4>The Map object is a simple key/value map. Any value (both objects and primitive values) may be used as either a key or a value.</h4>
+                <p>The Map object is a simple key/value map. Any value (both objects and primitive values) may be used as either a key or a value.</p>
 
-                <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
+                <pre style="position: absolute;"><code data-trim contenteditable>
 let map = new Map();
 
 const KEY1 = {};
 map.set(KEY1, 'hello');
-console.log(map.get(KEY1)); // hello
+map.get(KEY1); // hello
 
 const KEY2 = {};
 map.set(KEY2, 'world');
-console.log(map.get(KEY2)); // world
+map.get(KEY2); // world
                 </code></pre>
                 <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
 let map = new Map();
 
 const KEY1 = {};
 map.set(KEY1, 'hello');
-console.log(map.get(KEY1)); // hello
+map.get(KEY1); // hello
 
 const KEY2 = {};
 map.set(KEY2, 'world');
-console.log(map.get(KEY2)); // world
+map.get(KEY2); // world
 
-console.log(map.get(KEY1)); // hello
+map.get(KEY1); // hello
                 </code></pre>
                 <pre class="fragment" style="position: absolute;"><code data-trim contenteditable>
 let map = new Map();
 
 const KEY1 = {};
 map.set(KEY1, 'hello');
-console.log(map.get(KEY1)); // hello
+map.get(KEY1); // hello
 
 const KEY2 = {};
 map.set(KEY2, 'world');
-console.log(map.get(KEY2)); // world
+map.get(KEY2); // world
 
-console.log(map.get(KEY1)); // hello
+map.get(KEY1); // hello
 
-console.log(map.get({})); // undefined
+map.get({}); // undefined
                 </code></pre>
             </section>
 
