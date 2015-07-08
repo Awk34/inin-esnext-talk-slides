@@ -395,58 +395,72 @@ f(...[1,2,3]) == 6
 
                 <pre style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 function* countToThree() {
-  var index = 0;
-  while(index < 2)
+  var index = 1;
+  while(index <= 3)
     yield index++;
-  return index;
 }
 
 var counter = countToThree();
                 </code></pre>
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 function* countToThree() {
-  var index = 0;
-  while(index < 2)
+  var index = 1;
+  while(index <= 3)
     yield index++;
-  return index;
 }
 
 var counter = countToThree();
 
-console.log(counter.next());
-// {value: 0, done: false}
-                </code></pre>
-                <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
-function* countToThree() {
-  var index = 0;
-  while(index < 2)
-    yield index++;
-  return index;
-}
-
-var counter = countToThree();
-
-console.log(counter.next());
-// {value: 0, done: false}
 console.log(counter.next());
 // {value: 1, done: false}
                 </code></pre>
                 <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
 function* countToThree() {
-  var index = 0;
-  while(index < 2)
+  var index = 1;
+  while(index <= 3)
     yield index++;
-  return index;
 }
 
 var counter = countToThree();
 
 console.log(counter.next());
-// {value: 0, done: false}
+// {value: 1, done: false}
+console.log(counter.next());
+// {value: 2, done: false}
+                </code></pre>
+                <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+function* countToThree() {
+  var index = 1;
+  while(index <= 3)
+    yield index++;
+}
+
+var counter = countToThree();
+
 console.log(counter.next());
 // {value: 1, done: false}
 console.log(counter.next());
-// {value: 2, done: true}
+// {value: 2, done: false}
+console.log(counter.next());
+// {value: 3, done: true}
+                </code></pre>
+                <pre class="fragment current-visible" style="position: absolute;"><code class="js" data-trim contenteditable style="font-size: 16px;">
+function* countToThree() {
+  var index = 1;
+  while(index <= 3)
+    yield index++;
+}
+
+var counter = countToThree();
+
+console.log(counter.next());
+// {value: 1, done: false}
+console.log(counter.next());
+// {value: 2, done: false}
+console.log(counter.next());
+// {value: 3, done: true}
+console.log(counter.next());
+// {done: true}
                 </code></pre>
 
                 <aside class="notes">
