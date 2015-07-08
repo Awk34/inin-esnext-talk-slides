@@ -1139,3 +1139,22 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * MDN LINK IMAGE
+ *********************************************/
+.reveal a.mdn {
+  position: absolute;
+  height: 100px;
+  width: 100px; }
+  .reveal a.mdn img {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 10px;
+    position: absolute;
+    border: 2px solid transparent; }
+  .reveal a.mdn:hover img {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid gray; }
